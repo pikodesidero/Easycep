@@ -1,0 +1,180 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Değişkenler (Renk Paleti) */
+:root {
+    --primary-color: #6c5ffc;
+    --primary-hover: #5447d9;
+    --success-color: #19b159;
+    --info-color: #0dcaf0;
+    --warning-color: #ffc107;
+    --secondary-color: #f0f2f8;
+    --background-color: #f9faff;
+    --card-background: #ffffff;
+    --text-color: #333;
+    --text-muted: #8c909a;
+    --border-color: #e9edf4;
+    --sidebar-width: 190px;
+}
+
+/* Genel Stiller */
+body { font-family: 'Poppins', sans-serif; background-color: var(--background-color); color: var(--text-color); font-size: 0.875rem; transition: background-color 0.3s, color 0.3s; }
+.page { display: flex; min-height: 100vh; }
+
+/* Kenar Çubuğu (Sidebar) */
+.sidebar { width: var(--sidebar-width); background-color: var(--card-background); border-right: 1px solid var(--border-color); display: flex; flex-direction: column; flex-shrink: 0; transition: background-color 0.3s, border-color 0.3s; }
+.sidebar-header { padding: 1.1rem 1.25rem; border-bottom: 1px solid var(--border-color); text-align: center; }
+.logo { font-size: 1.4rem; font-weight: 700; color: var(--primary-color); text-decoration: none; }
+.sidebar .nav-link { color: var(--text-muted); padding: 0.75rem 1.25rem; }
+.sidebar .nav-link.active, .sidebar .nav-link:hover { color: var(--primary-color); background-color: var(--secondary-color); }
+
+
+h1 {font-weight: bolder;
+font-size: 18px}
+/* Ana İçerik Alanı */
+.main-content { flex-grow: 1; padding: 1.25rem; width: calc(100% - var(--sidebar-width)); }
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+
+/* İstatistik Kartları */
+.summary-card { border-radius: 0.5rem; color: #fff; position: relative; overflow: hidden; padding: 1.25rem; box-shadow: 0 4px 24px 0 rgb(34 41 47 / 10%); }
+.summary-card .card-title { font-size: 1.75rem; font-weight: 700; margin-bottom: 0.25rem; }
+.summary-card .card-text { font-size: 0.9rem; opacity: 0.9; }
+.summary-card i { position: absolute; right: 15px; bottom: 10px; font-size: 3rem; opacity: 0.2; transform: rotate(-15deg); }
+.summary-card.card-primary { background: linear-gradient(to right, #6c5ffc, #8abdff); }
+.summary-card.card-success { background: linear-gradient(to right, #19b159, #34d399); }
+.summary-card.card-info { background: linear-gradient(to right, #0dcaf0, #67e8f9); }
+.summary-card.card-warning { background: linear-gradient(to right, #ffc107, #fde047); }
+
+/* Genel Kart (Card) Stilleri */
+.card { border: 1px solid var(--border-color); border-radius: 0.5rem; box-shadow: 0 4px 24px 0 rgb(34 41 47 / 8%); transition: background-color 0.3s, border-color 0.3s; background-color: var(--card-background); }
+.card-header { background-color: transparent; border-bottom: 1px solid var(--border-color); padding: 0.8rem 1.25rem; font-weight: 600; color: var(--text-color); }
+
+/* Form Elemanları */
+.form-control, .form-select { border-radius: 0.375rem; border-color: var(--border-color); font-size: 0.875rem; padding: 0.4rem 0.75rem; background-color: var(--card-background); color: var(--text-color); }
+.form-control:focus, .form-select:focus { border-color: var(--primary-color); box-shadow: 0 0 0 2px rgba(108, 95, 252, 0.25); }
+.form-section-title { font-weight: 600; color: var(--primary-color); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-color); }
+
+/* Düğme (Button) Stilleri */
+.btn { border-radius: 0.375rem; font-weight: 500; padding: 0.4rem 0.9rem; }
+.btn-primary { background-color: var(--primary-color); border-color: var(--primary-color); }
+.btn-primary:hover { background-color: var(--primary-hover); border-color: var(--primary-hover); }
+
+/* Modal Stilleri */
+.modal-content { border-radius: 0.5rem; border: none; background-color: var(--card-background); color: var(--text-color); }
+.modal-header { background-color: var(--secondary-color); border-bottom-color: var(--border-color); }
+.modal-body .nav-tabs { border-bottom-color: var(--border-color); }
+.modal-body .nav-tabs .nav-link { color: var(--text-muted); font-weight: 500; border: none; border-bottom: 2px solid transparent; }
+.modal-body .nav-tabs .nav-link.active, .modal-body .nav-tabs .nav-item.show .nav-link { color: var(--primary-color); background-color: transparent; border-color: transparent; border-bottom-color: var(--primary-color); }
+.modal-body .tab-content { padding-top: 1.5rem; }
+
+/* Görüntüleme Modalı Stilleri */
+.view-modal-body h6 { font-weight: 600; color: var(--primary-color); margin-top: 1rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-color); }
+.view-modal-body h6:first-child { margin-top: 0; }
+.view-modal-body dl { margin-bottom: 0; }
+.view-modal-body dt { font-weight: 500; color: var(--text-muted); }
+.view-modal-body dd { font-weight: 500; color: var(--text-color); }
+
+/* DataTables Stilleri */
+.dataTables_wrapper .table thead th { background-color: var(--secondary-color); font-weight: 600; border-bottom: 2px solid var(--border-color); }
+.table-hover > tbody > tr:hover { background-color: var(--secondary-color); }
+.dataTables_wrapper .dataTables_paginate .page-item.active .page-link { background-color: var(--primary-color); border-color: var(--primary-color); }
+.dataTables_wrapper .dataTables_paginate .page-link { color: var(--primary-color); }
+.table .btn-action { padding: 0.15rem 0.4rem; font-size: 0.75rem; }
+.dt-buttons .btn { background-color: var(--secondary-color); color: var(--text-color); border: 1px solid var(--border-color); }
+
+/*
+--- KARANLIK MOD STİLLERİ ---
+*/
+body.dark-mode {
+    --background-color: #121212;
+    --card-background: #1e1e1e;
+    --text-color: #e0e0e0;
+    --text-muted: #888;
+    --border-color: #333;
+    --secondary-color: #2a2a2a;
+}
+
+body.dark-mode .sidebar .nav-link.active,
+body.dark-mode .sidebar .nav-link:hover {
+    color: #fff;
+    background-color: var(--primary-color);
+}
+
+body.dark-mode .text-gray-800 {
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+body.dark-mode .dt-buttons .btn {
+    background-color: #333;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+body.dark-mode .table {
+    color: var(--text-color);
+}
+
+body.dark-mode .dataTables_wrapper .dataTables_paginate .page-link {
+    background-color: transparent;
+    color: var(--text-muted);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .dataTables_wrapper .dataTables_paginate .page-item.disabled .page-link {
+    color: #555;
+}
+
+body.dark-mode .dataTables_wrapper .dataTables_paginate .page-item.active .page-link {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff;
+}
+
+body.dark-mode .view-modal-body p.bg-light {
+    background-color: #2a2a2a !important;
+}
+
+/* Ana menüdeki aktif link */
+.sidebar .nav-link.active {
+    background-color: #0d6efd; /* Bootstrap primary rengi */
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Aktif olmayan linklerin üzerine gelince */
+.sidebar .nav-link:not(.active):hover {
+    background-color: #f0f0f0;
+    color: #333;
+    border-radius: 5px;
+}
+
+/* Alt menü stilleri */
+.submenu {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.submenu .nav-link {
+    font-size: 0.9em; /* Alt menü yazı boyutu */
+    padding-left: 1.5rem; /* İçeriden başlasın */
+}
+
+/* Alt menüdeki aktif link */
+.submenu .nav-link.active {
+    color: #0d6efd;
+    font-weight: 600;
+    background-color: transparent; /* Ana menü gibi olmasın */
+}
+
+/* Alt menü açma/kapama oku */
+.sidebar .nav-link[data-bs-toggle="collapse"] .fa-chevron-down {
+    transition: transform 0.2s ease-in-out;
+}
+.sidebar .nav-link[data-bs-toggle="collapse"][aria-expanded="true"] .fa-chevron-down {
+    transform: rotate(180deg);
+}
